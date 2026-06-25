@@ -1,0 +1,465 @@
+/*
+---------------------------------------
+BASE STRUCTURE
+Values extracted from BC Gov homepage
+---------------------------------------
+*/
+
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%
+}
+
+body {
+    margin: 0;
+    color: var(--bcgov-colours-typography-primary);
+    font-size: 16px;
+    overflow-wrap: break-word;
+    overflow-x: hidden
+}
+
+main {
+    display: block
+}
+
+progress {
+    vertical-align: baseline
+}
+
+details {
+    display: block
+}
+
+summary {
+    display: list-item
+}
+
+[hidden],
+template {
+    display: none
+}
+
+
+
+/*
+---------------------------------------
+BASE STYLES
+Some values extracted from BC Gov homepage
+---------------------------------------
+*/
+
+p, h1, h2, h3, h4, h5, h6, ul, ol, span, table.table {
+    color: var(--bcgov-colours-typography-primary);
+}
+
+html, body, main, article, p, h1, h2, h3, h4, h5, h6, ul, ol, span, div, table {
+    font-family: var(--bcgov-font-family) !important;
+}
+
+span.fa {
+    font-family: FontAwesome !important;
+}
+
+span.fa.fa-exclamation-circle {
+    color: var(--bcgov-colours-danger);
+}
+
+div.ls-questionhelp::before {
+    color: var(--bcgov-colours-info);
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a {
+    color: var(--bcgov-colours-surface-primary);
+}
+
+a.link-with-arrow:active,
+a.link-with-arrow:focus,
+a.link-with-arrow:hover,
+h1 a:active,
+h1 a:focus,
+h1 a:hover,
+h2 a:active,
+h2 a:focus,
+h2 a:hover,
+h3 a:active,
+h3 a:focus,
+h3 a:hover,
+h4 a:active,
+h4 a:focus,
+h4 a:hover,
+h5 a:active,
+h5 a:focus,
+h5 a:hover {
+    color: var(--bcgov-colours-link-heading-active-hover-focus)
+}
+
+h1 {
+    font-size: 36px;
+    margin: .67em 0;
+    padding-top: 0;
+}
+
+h2 {
+    font-size: 24px
+}
+
+h3 {
+    font-size: 20px
+}
+
+h4 {
+    font-size: 18px
+}
+
+ol li,
+ul li {
+    margin-bottom: 8px
+}
+
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+    margin-top: 8px;
+    margin-bottom: 8px
+}
+
+pre {
+    font-family: monospace, monospace;
+    font-size: 1em
+}
+
+a {
+    background-color: transparent
+}
+
+a {
+    color: var(--bcgov-colours-link-heading-active-hover-focus)
+}
+
+a:active,
+a:focus,
+a:hover {
+    color: var(--bcgov-colours-link-active-hover-focus)
+}
+
+abbr[title] {
+    border-bottom: none;
+    text-decoration: underline;
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted
+}
+
+b,
+strong {
+    font-weight: bolder
+}
+
+code,
+kbd,
+samp {
+    font-family: monospace, monospace;
+    font-size: 1em
+}
+
+small {
+    font-size: 80%
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline
+}
+
+sub {
+    bottom: -.25em
+}
+
+sup {
+    top: -.5em
+}
+
+img {
+    border-style: none;
+    max-width: 100%;
+}
+
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid var(--bcgov-colours-button-disabled-primary);
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+
+
+
+/*
+---------------------------------------
+FORM ELEMENTS
+Some values extracted from BC Gov homepage 
+---------------------------------------
+*/
+
+.table>:not(:first-child), 
+tbody {
+    border-top-color: var(--bcgov-colours-border-medium) !important;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0
+}
+
+button,
+input {
+    overflow: visible
+}
+
+.input-cell,
+input {
+    max-width: 500px !important;
+}
+
+button:hover {
+    text-decoration: none !important;
+}
+
+button,
+select {
+    text-transform: none
+}
+
+[type=button],
+[type=reset],
+[type=submit],
+button {
+    -webkit-appearance: button
+}
+
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner,
+button::-moz-focus-inner {
+    border-style: none;
+    padding: 0
+}
+
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring,
+button:-moz-focusring {
+    outline: 1px dotted ButtonText
+}
+
+.btn-primary {
+    padding: 10px 20px;
+}
+
+.btn-primary {
+    display: inline-block;
+    border-radius: 4px;
+    text-decoration: none;
+    background-color: var(--bcgov-colours-surface-primary);
+    color: var(--bcgov-colours-typography-primary-invert);
+    cursor: pointer;
+    border: none;
+    text-align: center
+}
+
+.btn-primary:focus,
+.btn-primary:hover {
+    background-color: var(--bcgov-colours-button-hover-primary);
+    color: var(--bcgov-colours-typography-primary-invert);
+    text-decoration: underline
+}
+
+.btn-primary:focus {
+    outline: 3px solid var(--bcgov-colours-border-active)
+}
+
+.btn-primary:disabled {
+    background-color: var(--bcgov-colours-button-disabled-primary);
+    color: var(--bcgov-colours-typography-primary-invert);
+    text-decoration: none
+}
+
+.btn-primary-light {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    background-color: var(--bcgov-colours-typography-primary-invert);
+    color: var(--bcgov-colours-typography-primary);
+    cursor: pointer;
+    border: none
+}
+
+.btn-primary-light:hover {
+    background-color: var(--bcgov-colours-button-disabled-primary);
+    text-decoration: underline
+}
+
+.btn-primary-light:focus {
+    background-color: var(--bcgov-colours-button-disabled-primary);
+    text-decoration: underline;
+    outline: 3px solid var(--bcgov-colours-border-active)
+}
+
+.btn-primary-light:disabled {
+    color: var(--bcgov-colours-button-disabled-primary);
+    text-decoration: none
+}
+
+.btn-secondary,
+.btn-outline-secondary {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 27px;
+    background-color: var(--bcgov-colours-typography-primary-invert);
+    color: var(--bcgov-colours-typography-primary);
+    border: 1px solid var(--bcgov-colours-typography-primary);
+    cursor: pointer
+}
+
+.btn-secondary:hover,
+.btn-outline-secondary:hover {
+    background-color: var(--bcgov-colours-button-disabled-primary);
+    color: var(--bcgov-colours-typography-primary);
+}
+
+.btn-secondary:focus,
+.btn-outline-secondary:focus {
+    background-color: var(--bcgov-colours-typography-primary-invert);
+    outline: 2px solid var(--bcgov-colours-border-active)
+}
+
+.btn-secondary:disabled,
+.btn-outline-secondary:disabled {
+    background-color: var(--bcgov-colours-button-disabled-primary);
+    border: 1px solid var(--bcgov-colours-button-primary-disabled-border);
+    color: var(--bcgov-colours-button-primary-disabled-text)
+}
+
+fieldset {
+    padding: .35em .75em .625em
+}
+
+legend {
+    box-sizing: border-box;
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    padding: 0;
+    white-space: normal;
+}
+
+textarea {
+    overflow: auto
+}
+
+input[type=checkbox],
+input[type=radio] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+input[type=radio] + label::before,
+input[type=checkbox] + label::before {
+    top: 4px;
+}
+
+input[type=radio] + label::after {
+    top: 7px;
+}
+
+input[type=checkbox] + label::after {
+    top: 5px;
+}
+
+input[type=radio]:checked + label::before {
+    background-color: var(--bcgov-colours-surface-primary) !important;
+    
+}
+
+input[type=radio]:checked + label::after,
+.form-check-input:checked {
+    background-color: var(--bcgov-colours-typography-primary-invert) !important;
+}
+
+input[type=radio]:checked + label::after {
+    transform: scale(0.4, 0.4) !important;
+}
+
+input[type=checkbox]:checked + label::after,
+.form-check-input:checked {
+    background-color: var(--bcgov-colours-surface-primary) !important;
+    color: var(--bcgov-colours-typography-primary-invert) !important;
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+    height: auto
+}
+
+[type=search] {
+    -webkit-appearance: textfield;
+    outline-offset: -2px;
+}
+
+[type=search]::-webkit-search-decoration {
+    -webkit-appearance: none
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit
+}
+
+input[type=search] {
+    height: 100%;
+    padding: 6px 12px 6px 26px;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-color: var(--bcgov-colours-typography-primary-invert);
+    background-position: 4px 6px !important;
+    text-align: left;
+    display: flex;
+    border: 1px solid var(--bcgov-colours-button-primary-disabled-border);
+    width: 224px;
+    border-radius: 4px
+}
+
+input[type=search]:focus {
+    background-image: none;
+    border-radius: 4px;
+    border: 1px solid var(--bcgov-colours-border-active) !important;
+    background: var(--bcgov-colours-typography-primary-invert);
+    outline: none
+}
+
+input[type=search]:focus::-webkit-input-placeholder {
+    color: transparent
+}
+
+input[type=search]:not(:placeholder-shown) {
+    background-image: none
+}

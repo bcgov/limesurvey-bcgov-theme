@@ -1,0 +1,1101 @@
+/******************
+    User custom CSS
+    ---------------
+
+    In this file you can add your own custom CSS
+    It will be loaded last, so you can override any other property.
+    Also, it will never be updated. So if you inheritate a core template and just add here some CSS, you'll still benefit of all the updates
+*/
+
+
+
+/*
+---------------------------------------
+REUSABLE CLASSES
+---------------------------------------
+*/
+
+.display-flex {
+    display: flex;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.text-center {
+    text-align: center;
+    word-wrap: normal;
+}
+
+/* Underlined title, usually used as H1 */
+.underlined-title {
+    width: fit-content;
+    border-bottom: 3px solid var(--bcgov-colours-icon-warning);
+    margin-bottom: 2rem;
+    padding: 0;
+}
+
+/* Title with yellow eyebrow line, used for h2 and survey group title */
+.group-title,
+.yellow-eyebrow-title {
+    text-align: left !important;
+    margin-top: 0;
+    margin-top: 1rem;
+}
+
+.group-title::before,
+.yellow-eyebrow-title::before {
+    content: "";
+    position: relative;
+    top: -10px;
+    left: 0;
+    width: 36px;
+    height: 4px;
+    background-color: var(--bcgov-colours-gold-primary);
+    display: flex;
+}
+
+/* red text highlighting and regular font weight for (required) text */
+span.required {
+    color: var(--bcgov-colours-danger);
+    font-weight: normal;
+}
+
+.text-info {
+    color: var(--bcgov-colours-typography-primary) !important;
+    margin-bottom: 1rem;
+}
+
+.fa-exclamation-triangle {
+    color: var(--bcgov-colours-danger);
+}
+
+
+
+/*
+---------------------------------------
+LAYOUT
+---------------------------------------
+*/
+
+#outerframeContainer {
+    width: 100%;
+    max-width: 100%;
+    padding: 1.5rem 1.5rem 5rem;
+    margin: 0;
+    min-height: 60vh;
+}
+
+#main-col {
+    margin: 0 auto;
+    max-width: var(--bcgov-layout-width-default);
+}
+
+.btn-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    grid-gap: 12px;
+    gap: 12px
+}
+
+.bottom {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%
+}
+
+.group-outer-container {
+    margin-top: 0;
+}
+
+.row {
+    margin: 0;
+}
+
+.row.question-container {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    margin-top: -1px;
+    border: 1px solid var(--bcgov-colours-button-primary-disabled-border);
+}
+
+.question-container.row>*, .group-description.row>* {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.ls-answers.answer-item>* {
+    padding-left: 0;
+    padding-right: 0;
+    min-width: calc(50% - 1.5rem);
+    width: 400px;
+    max-width: 100%;
+}
+
+.ls-answers.answer-item textarea,
+.ls-answers.answer-item .col-12:has(textarea) {
+    width: 100%;
+}
+
+div.col-auto div.dropdown {
+    min-width: calc(50% - 1.5rem);
+    width: 400px;
+    max-width: 100%;
+}
+
+div.dropdown.bootstrap-select.form-control.list-question-select {
+    min-width: calc(50% - 1.5rem);
+    width: 400px !important;
+}
+
+#limesurvey.survey-form-container {
+    width: 100%;
+    max-width: var(--bcgov-layout-width-default);
+    min-height: 300px;
+    margin: auto;
+}
+
+.group-description .col-12.well {
+    padding-bottom: 1.5rem;
+}
+
+.ls-answers.answer-item.col-auto {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+div.dropdown.bootstrap-select.form-control.list-question-select {
+    max-width: 100% !important;
+}
+
+
+
+/*
+---------------------------------------
+ERROR CARD
+for full screen errors like unhandled survey back navigation
+---------------------------------------
+*/
+
+.container:has(#error-card) {
+    padding: 2rem 1.5rem;
+    max-width: calc(var(--bcgov-layout-width-default) + 3rem);
+}
+
+#error-card {
+    width: var(--bcgov-layout-width-default) !important;
+    max-width: 100%;
+    margin: 8rem auto !important;
+    padding: 2.5rem;
+    background-color: var(--bcgov-colours-surface-danger);
+    border: 0.5px solid var(--bcgov-colours-danger);
+}
+
+#error-card hr {
+    opacity: 0.8;
+    height: 2px;
+    color: var(--bcgov-colours-danger);
+}
+
+#error-card .text-danger {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0 !important;
+}
+
+#error-card .card-title {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+#error-card .card-text p,
+#error-card .card-title p {
+    margin-bottom: 0.5rem;
+}
+
+#error-card .card-title p {
+    display: inline;
+    align-items: center;
+    gap: 1rem;
+    color: var(--bcgov-colours-typography-primary) !important;
+}
+
+#error-card .card-body {
+    padding: 0;
+}
+
+
+
+/*
+---------------------------------------
+NAVIGATION BAR
+---------------------------------------
+*/
+
+#survey-nav {
+    padding: 0 1.5rem;
+    background-color: var(--bcgov-colours-typography-primary-invert) !important;
+}
+
+#survey-nav .container-fluid {
+    background-color: var(--bcgov-colours-typography-primary-invert);
+    width: 100%;
+    max-width: var(--bcgov-layout-width-default);
+    margin: auto;
+    padding: 16px 0;
+}
+
+#survey-nav + .container-fluid {
+    padding: 0;
+}
+
+@media(min-width: 769px) {
+    #survey-nav .container-fluid {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+
+#survey-nav .logo.img-fluid {
+    padding: 0;
+    height: 60px;
+    position: relative;
+    left: -12px;
+}
+
+#survey-nav ul {
+    padding: 0 !important;
+}
+
+
+
+/*
+---------------------------------------
+LANGUAGE SELECTOR
+---------------------------------------
+*/
+
+.form-change-lang {
+    padding-bottom: 1rem;
+    gap: 1.5rem;
+    display: flex;
+}
+
+.form-change-lang>* {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+select#lang {
+    height: 100%;
+}
+
+
+
+/*
+---------------------------------------
+PROGRESS BAR
+---------------------------------------
+*/
+
+.survey-progress-container {
+    width: 100%;
+    margin: 0 !important;
+    padding: 1rem 1.5rem;
+}
+
+.survey-progress-container .progress-bar {
+    background-color: var(--bcgov-colours-surface-primary);
+}
+
+.survey-progress-container .top-content {
+    width: 100%;
+    max-width: var(--bcgov-layout-width-default);
+    margin: auto;
+    margin-bottom: 0 !important;
+    padding: 1em 0;
+}
+
+
+
+/*
+---------------------------------------
+WARNINGS
+---------------------------------------
+*/
+
+.alert-warning {
+    max-width: var(--bcgov-layout-width-default);
+    margin: 0 auto 1.5rem !important;
+    padding: 1.5rem;
+    padding-right: 2.5rem;
+}
+
+ul.alert.alert-danger {
+    border: 1px solid var(--bcgov-colours-danger);
+}
+
+ul.alert.alert-danger::before {
+    font-family: 'FontAwesome';
+    content: "\f071\00a0";
+    color: var(--bcgov-colours-danger);
+}
+
+ul.alert.alert-danger li {
+    color: var(--bcgov-colours-typography-primary);
+}
+
+ul.alert.alert-danger>* {
+    display: inline-block;
+}
+
+
+
+/*
+---------------------------------------
+WELCOME MESSAGE
+---------------------------------------
+*/
+
+#welcome-container {
+    margin: 0 0 5rem;
+}
+
+#welcome-container p {
+    font-size: 16px !important;
+    font-weight: normal;
+    margin: 0;
+    line-height: 1.5;
+}
+
+#welcome-container .survey-description,
+#welcome-container .survey-welcome {
+    margin-bottom: 2rem;
+}
+
+#welcome-container h1 {
+    display: inline-block;
+    border-bottom: 3px solid var(--bcgov-colours-icon-warning);
+}
+
+
+
+/*
+---------------------------------------
+SURVEY LIST
+---------------------------------------
+*/
+
+#surveys-list-jumbotron {
+    text-align: left;
+}
+
+#surveys-list-container {
+    margin: 0;
+    padding: 1.5rem;
+}
+
+#surveys-list-container .limesurvey-logo {
+    margin: 0 0 2rem !important;
+    height: 40px;
+    width: auto;
+}
+
+#surveys-list-container .survey-list-heading,
+#surveys-list-container .row,
+#surveylist-language-changer {
+    padding: 0;
+}
+
+#surveylist-language-changer {
+    padding-bottom: 1rem;
+}
+
+.surveys-list.list-unstyled li {
+    padding: 0.5em 0;
+}
+
+#surveys-list-container .survey-list-heading {
+    min-height: 50vh;
+}
+
+
+
+/*
+---------------------------------------
+PRIVACY POLICY
+---------------------------------------
+*/
+
+#datasecurity_accepted {
+    vertical-align: top;
+    float: none;
+    margin-left: 0;
+}
+
+label[for="datasecurity_accepted"] {
+    display: inline-flex;
+    gap: 1rem;
+    margin-left: 4px;
+}
+
+label[for="datasecurity_accepted"] a {
+    color: var(--bcgov-colours-link);
+    text-decoration: none;
+    display: flex;
+}
+
+.privacy.row {
+    margin-bottom: 3rem;
+}
+
+.privacy.row .col-12 {
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+}
+
+.privacy.row .limit-text-window {
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--bcgov-colours-border-light);
+    border-left: 6px solid var(--bcgov-colours-surface-primary);
+    border-radius: 4px;
+    background-color: var(--bcgov-colours-gray-10);
+}
+
+.privacy.row .fade.collapse {
+    margin-top: 1rem;
+    border-left: 6px solid var(--bcgov-colours-surface-primary);
+    border-radius: 4px;
+}
+
+.privacy.row .fade.collapse h4 {
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.privacy.row .fade.collapse .card-header,
+.privacy.row .fade.collapse .card-body,
+.privacy.row .fade.collapse .card-footer {
+    background-color: var(--bcgov-colours-gray-10) !important;
+    border: none;
+}
+
+.privacy.row .fade.collapse .card-footer {
+    padding: 1rem;
+}
+
+
+
+/*
+---------------------------------------
+CLEAR ANSWERS
+---------------------------------------
+*/
+
+.return-to-survey p {
+    margin-bottom: 2rem;
+}
+
+
+
+/*
+---------------------------------------
+COMPLETED MESSAGE
+---------------------------------------
+*/
+
+.completed-wrapper .completed-text .completed-confirmation-message {
+    margin-bottom: 3rem;
+}
+
+.completed-confirmation-message {
+    border-radius: 4px;
+    border: 1px solid var(--bcgov-colours-icon-success);
+    background-color: var(--bcgov-colours-surface-success);
+    padding: 1rem;
+}
+
+.completed-confirmation-message .fa {
+    font-size: 20px;
+    font-weight: normal;
+    color: var(--bcgov-colours-icon-success);
+    position: relative;
+    top: 1px;
+}
+
+.bcgov-arrow-button span {
+    color: inherit;
+}
+
+.inline-flex {
+    display: inline-flex;
+    padding: 0 1rem 1rem 0;
+}
+
+@media(max-width: 500px) {
+    .inline-flex,
+    .inline-flex a,
+    .inline-flex button {
+        width: 100%;
+        padding-right: 0;
+    }
+}
+
+
+
+/*
+---------------------------------------
+ASSESSMENTS
+---------------------------------------
+*/
+
+table.assessment-table.table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid var(--bcgov-colours-typography-primary);
+    border-left: 6px solid var(--bcgov-colours-surface-primary);
+    border-radius: 4px;
+    overflow: hidden;
+    padding: 1rem;
+    background-color: var(--bcgov-colours-gray-10);
+    margin-bottom: 3rem;
+}
+
+table.assessment-table .assessment-heading {
+    font-weight: bold;
+}
+
+table.assessment-table tbody,
+table.assessment-table tr,
+table.assessment-table tr td,
+table.assessment-table th {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+table.assessment-table th {
+    font-weight: normal;
+}
+
+table.assessment-table table.assessments.table,
+table.assessment-table table.assessments.table td,
+table.assessment-table table.assessments.table th,
+table.assessment-table table.assessments.table tr {
+    padding: 0.5rem 0 !important;
+}
+
+table.assessments {
+    margin-bottom: 0;
+}
+
+
+
+/*
+---------------------------------------
+ITEM RANKING COMPONENT
+---------------------------------------
+*/
+
+.col-md-6.col-6.ranking-available-items {
+    padding-left: 0 !important;
+}
+
+.col-md-6.col-6.ranking-sorted-items {
+    padding-right: 0 !important;
+}
+
+.answers-list strong {
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+@media (max-width: 500px) {
+
+    .answers-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .col-md-6.col-6.ranking-available-items,
+    .col-md-6.col-6.ranking-sorted-items {
+        padding: 0 !important;
+        width: 100%;
+    }
+}
+
+
+
+/*
+---------------------------------------
+BOOTSTRAP BUTTON MULTI-SELECT
+---------------------------------------
+*/
+
+.ls-answers.checkbox-list.answers-list .list-unstyled.form-inline.btn-toolbar {
+    padding: 0;
+    gap: 1rem;
+}
+
+.ls-answers.checkbox-list.answers-list .form-check,
+.ls-answers.checkbox-list.answers-list .question-item,
+.ls-answers.checkbox-list.answers-list .btn-primary {
+    margin: 0 !important;
+    height: 43px;
+}
+
+.ls-answers.checkbox-list.answers-list .btn-primary {
+    border: 2px solid var(--bcgov-colours-border-medium);
+    background: transparent;
+    color: var(--bcgov-colours-typography-primary);
+    text-decoration: none;
+}
+
+.ls-answers.checkbox-list.answers-list .btn-check:hover+.btn-primary {
+    background-color: var(--bcgov-colours-border-medium);
+}
+
+.ls-answers.checkbox-list.answers-list .btn-check:checked+.btn-primary {
+    background-color: var(--bcgov-colours-border-active);
+    color: var(--bcgov-colours-typography-primary-invert);
+    border-color: var(--bcgov-colours-border-active);
+}
+
+.form-check {
+    padding: 0;
+}
+
+.ls-answers.answer-item {
+    width: 100%;
+}
+
+
+
+/*
+---------------------------------------
+DROP DOWN SELECTION
+---------------------------------------
+*/
+
+.dropdown-menu li .dropdown-item:active span.text {
+    color: var(--bcgov-colours-typography-primary-invert) !important;
+}
+
+.dropdown-item.selected.active {
+    background-color: var(--bcgov-colours-surface-primary);
+}
+
+.dropdown-item.selected.active span {
+    color: var(--bcgov-colours-typography-primary-invert);
+}
+
+
+
+/*
+---------------------------------------
+REQUIRED QUESTION
+---------------------------------------
+*/
+
+.question-valid-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.ls-label-question p {
+    display: inline-block;
+}
+
+.question-valid-container .text-danger,
+.question-valid-container .text-danger span {
+    color: var(--bcgov-colours-danger);
+    font-weight: normal;
+}
+
+.question-valid-container span.fa-exclamation-circle {
+    font-family: 'remixicon' !important;
+}
+
+
+
+/*
+---------------------------------------
+PREVIOUS/NEXT NAVIGATOR
+---------------------------------------
+*/ 
+
+#navigator-container {
+    padding: 0;
+}
+
+#navigator-container div.col-6.text-start {
+    padding-left: 0 !important;
+}
+
+#navigator-container div.col-6.text-end {
+    padding-right: 0 !important;
+}
+
+#ls-button-previous {
+    height: 100%;
+}
+
+
+
+/*
+---------------------------------------
+SURVEY COMPLETED
+---------------------------------------
+*/
+
+.survey-completed-h1 {
+    display: inline-block;
+    border-bottom: 3px solid var(--bcgov-colours-icon-warning);
+}
+
+
+
+/*
+---------------------------------------
+SAVE SURVEY / LOAD SURVEY
+---------------------------------------
+*/
+
+.save-message.card.card-body,
+.save-message.card .card-body {
+    background-color: var(--bcgov-colours-typography-primary-invert) !important;
+    border: none;
+    padding: 0;
+}
+
+.save-message .card-title {
+    width: fit-content;
+    border-bottom: 3px solid var(--bcgov-colours-icon-warning);
+    margin-bottom: 2rem;
+}
+
+.load-survey-label,
+.save-survey-label {
+    margin-bottom: 0.5rem;
+}
+
+.save-survey-input.float-end {
+    float: none;
+    display: inline-flex;
+    margin-left: auto;
+}
+
+.survey-form-container .save-message {
+    border: none;
+}
+
+.survey-form-container .save-survey-input.input-cell {
+    width: 100%;
+    padding: 0;
+}
+
+.survey-form-container .save-survey-label {
+    padding: 0;
+}
+
+.load-survey-buttons,
+.save-survey-buttons {
+    display: flex; 
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.load-survey-buttons>*,
+.save-survey-buttons>* {
+    display: inline-block;
+}
+
+.load-survey-buttons button,
+.save-survey-buttons button {
+    min-width: fit-content;
+    max-width: 100%;
+}
+
+
+
+/*
+---------------------------------------
+REGISTER / REGISTRATION
+---------------------------------------
+*/
+
+div.register-container {
+    margin: 0;
+    padding: 0;
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+.register-container .card-body.container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.register-container .register-jumbotron {
+    padding: 0 !important;
+    border: none;
+    background-color: var(--bcgov-colours-typography-primary-invert) !important;
+}
+
+.register-container label {
+    margin-bottom: 0.5rem;
+    width: 100%;
+}
+
+.register-container label[for="lang"] {
+    width: auto;
+}
+
+.register-form #register_button {
+    margin-top: 2rem;
+}
+
+.register-form form {
+    padding: 0;
+}
+
+
+
+/*
+---------------------------------------
+PRINT / EXPORT
+---------------------------------------
+*/
+
+.row.export {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    width: 100%;
+    justify-content: flex-start;
+    margin-bottom: 2rem;
+}
+
+.row.export button {
+    width: 300px;
+}
+
+.row.export>* {
+    padding: 0;
+    display: inline-flex;
+    width: auto;
+    max-width: 100%;
+}
+
+@media (max-width: 500px) {
+    .row.export>* {
+        width: 100%;
+    }
+
+    .row.export form,
+    .row.export button {
+        width: 100%;
+    }
+}
+
+.export-column {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+}
+
+
+
+/*
+---------------------------------------
+STATS / STATISTICS
+---------------------------------------
+*/
+
+div.container.public-stats,
+div.container.public-stats .col-12 {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/*
+---------------------------------------
+QUOTAS EXCEEDED
+---------------------------------------
+*/
+
+.quotamessage {
+    background-color: var(--bcgov-colours-surface-danger);
+    border: 1px solid var(--bcgov-colours-danger);
+    border-radius: 4px;
+    padding: 1rem;
+    margin: 2rem 0 3rem;
+}
+
+.quotas-end-url {
+    padding: 3rem 0 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.quotas-end-url button {
+    min-width: 125px;
+    max-width: 100%;
+}
+
+@media (max-width: 500px) {
+    .quotas-end-url a,
+    .quotas-end-url button {
+        width: 100%;
+    }
+}
+
+
+
+/*
+---------------------------------------
+ACCESS CODE / LOGIN / AUTHORIZATION / RESTRICTED
+---------------------------------------
+*/
+
+.token-page .card.card-body {
+    padding: 1.5rem;
+    margin-bottom: 3rem !important;
+    margin-left: 0;
+    border: 1px solid var(--bcgov-colours-border-light);
+    border-left: 6px solid var(--bcgov-colours-surface-primary);
+    border-radius: 4px;
+    background-color: var(--bcgov-colours-gray-10);
+    max-width: 700px;
+}
+
+.token-page .token-container {
+    margin-bottom: 3rem;
+}
+
+.token-page button[name="continue"] {
+    margin-top: 0.5rem;
+}
+
+.token-page button#default {
+    margin-top: 1rem;
+}
+
+
+
+/*
+---------------------------------------
+FOOTER
+---------------------------------------
+*/
+
+div.landAcknowledgement__container {
+    margin: auto;
+    padding: 2rem 1.5rem;
+    display: block;
+    unicode-bidi: isolate;
+    background-color: var(--bcgov-colours-typography-primary);
+    font-size: 14px;
+    line-height: 21px;
+    border-top: 4px solid var(--bcgov-colours-gold-primary);
+    border-bottom: 4px solid var(--bcgov-colours-gold-primary);
+}
+
+div.landAcknowledgement__text p {
+    color: var(--bcgov-colours-typography-primary-invert);
+    max-width: var(--bcgov-layout-width-default);
+    width: 100%;
+    display: flex;
+    margin: auto;
+}
+
+footer {
+    width: 100%;
+    margin: auto;
+    -webkit-text-size-adjust: 100%;
+    font-family: BC Sans, Calibri, Arial, 'sans serif';
+    overflow-wrap: break-word;
+    font-size: 14px;
+    color: var(--bcgov-colours-typography-primary);
+    line-height: 21px;
+    padding: 1.5rem;
+    padding-top: 3.5rem;
+    background-color: var(--bcgov-colours-typography-primary-invert);
+}
+
+footer h2 {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 24px;
+    margin: 0 0 16px;
+}
+
+footer a {
+    color: var(--bcgov-colours-typography-primary);
+}
+
+footer .container {
+    display: flex;
+    gap: 32px;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding: 0;
+    max-width: var(--bcgov-layout-width-default);
+    width: 100%;
+}
+
+@media (max-width: 700px) {
+    footer .container {
+        flex-direction: column !important;
+    }
+}
+
+footer .contact {
+    padding: 0;
+    flex: 0 0 60%;
+}
+
+footer .contact img {
+    width: 140px;
+}
+
+footer .contact p {
+    margin-top: 1rem;
+}
+
+footer .more-info {
+    flex: 0 0 40%;
+}
+
+footer .more-info ul {
+    columns: 2;
+    margin: 0px 0px 16px;
+    gap: 48px;
+    list-style-type: none;
+    padding: 0;
+}
+
+footer .bottom {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    border-top: 1px solid var(--bcgov-colours-surface-primary);
+    padding: 0;
+    padding-top: 32px;
+    width: 100%;
+    max-width: var(--bcgov-layout-width-default);
+    margin: auto;
+    margin-top: 32px;
+}

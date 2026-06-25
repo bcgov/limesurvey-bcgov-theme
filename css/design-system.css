@@ -1,0 +1,98 @@
+/*
+---------------------------------------
+FONTS
+---------------------------------------
+*/
+
+@font-face {
+    font-family: BC Sans;
+    src: url(../fonts/2023_01_01_BCSans-Regular_2f.woff2) format("woff2"), url(../fonts/2023_01_01_BCSans-Regular_2f.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: BC Sans;
+    src: url(../fonts/2023_01_01_BCSans-Bold_2f.woff2) format("woff2"), url(../fonts/2023_01_01_BCSans-Bold_2f.woff) format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: BC Sans;
+    src: url(../fonts/2023_01_01_BCSans-Italic_2f.woff2) format("woff2"), url(../fonts/2023_01_01_BCSans-Italic_2f.woff) format("woff");
+    font-weight: 400;
+    font-style: italic;
+    font-display: block;
+}
+
+@font-face {
+    font-family: BC Sans;
+    src: url(../fonts/2023_01_01_BCSans-BoldItalic_2f.woff2) format("woff2"), url(../fonts/2023_01_01_BCSans-BoldItalic_2f.woff) format("woff");
+    font-weight: 700;
+    font-style: italic;
+    font-display: block;
+}
+
+@font-face {
+    font-family: BC Sans;
+    src: url(../fonts/2023_01_01_BCSans-Light_2f.woff2) format("woff2"), url(../fonts/2023_01_01_BCSans-Light_2f.woff) format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: BC Sans;
+    src: url(../fonts/2023_01_01_BCSans-LightItalic_2f.woff2) format("woff2"), url(../fonts/2023_01_01_BCSans-LightItalic_2f.woff) format("woff");
+    font-weight: 300;
+    font-style: italic;
+    font-display: block;
+}
+
+
+
+/* 
+---------------------------------------
+THEME VARIABLES
+--------------------------------------- 
+*/
+
+:root {
+    /* Typography Colours */
+    --bcgov-colours-typography-primary: #2d2d2d;
+    --bcgov-colours-typography-primary-invert: #ffffff;
+    /* Link Colours */
+    --bcgov-colours-link: #255a90;
+    --bcgov-colours-link-active-hover-focus: #2378c7;
+    --bcgov-colours-link-heading-active-hover-focus: #1a5a96;
+    /* Notification Colours */
+    --bcgov-colours-danger: #ce3e39;
+    --bcgov-colours-info: #053662;
+    --bcgov-colours-icon-warning: #f8bb47;
+    --bcgov-colours-icon-success: #42814a;
+    /* Border Colours */
+    --bcgov-colours-border-active: #2e5dd7;
+    --bcgov-colours-border-medium: #898785;
+    --bcgov-colours-border-light: #d8d8d8;
+    --bcgov-colours-border-dark: #353433;
+    /* Button Colours */
+    --bcgov-colours-button-disabled-primary: #edebe9;
+    --bcgov-colours-button-hover-primary: #1e5189;
+    --bcgov-colours-button-primary-disabled-border: #d9d9d9;
+    --bcgov-colours-button-primary-disabled-text: #a19f9d;
+    /* Background Colours */
+    --bcgov-colours-gold-primary: #fcba19;
+    --bcgov-colours-surface-danger: #f4e1e2;
+    --bcgov-colours-surface-primary: #013366;
+    --bcgov-colours-surface-success: #f6fff8;
+    --bcgov-colours-gray-10: #faf9f8;
+
+    /* Layout Width */
+    --bcgov-layout-width-default: 1120px;
+
+    /* Font Family */
+    --bcgov-font-family: 'BC Sans', Calibri, Arial, 'sans serif';
+}
