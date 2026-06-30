@@ -20,12 +20,13 @@ The LimeSurvey theme for the Government of British Columbia, made to match the l
 
 ## User Installation
 
-Do not install the theme from this repo. Instead:
+Do not install the theme from this repo by cloning. Instead:
 <br />
 
-1. Download the `.zip` distribution of the theme  
-2. Navigate to the **Themes** section of the LimeSurvey dashboard  
-3. Click **Upload and Install**
+1. Go to the **Releases** section of the repo
+2. Download the `.zip` distribution of the theme
+3. Navigate to the **Themes** section of the LimeSurvey dashboard  
+4. Click **Upload and Install**
 <br />
 
 ## Development Prerequisites
