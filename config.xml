@@ -11,7 +11,7 @@
         <authorUrl>https://www2.gov.bc.ca/gov/content/home</authorUrl>
         <copyright>Copyright (C) 2026 Government of British Columbia</copyright>
         <license>GNU General Public License version 2</license>
-        <version>1.0.0</version>
+        <version>1.0.1</version>
         <apiVersion>3</apiVersion>
         <description>The LimeSurvey theme for the Government of British Columbia, made to match the look and feel of the BC Design System.</description>
         <lastUpdate>2026-06-24 20:27:31</lastUpdate>

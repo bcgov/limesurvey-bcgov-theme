@@ -1,7 +1,7 @@
 # Government of British Columbia LimeSurvey Theme
 
 - **License:** GNU General Public License version 2
-- **Version:** 1.0.0
+- **Version:** 1.0.1
 - **Author:** Jareth Whitney
 
 The LimeSurvey theme for the Government of British Columbia, made to match the look and feel of the BC Design System.
